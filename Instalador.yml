@@ -1,5 +1,5 @@
 # Crea el instalador .exe de Windows automaticamente en los servidores de GitHub
-name: Crear instalador Windows
+name:    .github/workflows/instalador.yml
 
 on:
   workflow_dispatch:        # permite ejecutarlo con un boton (pestana Actions)
