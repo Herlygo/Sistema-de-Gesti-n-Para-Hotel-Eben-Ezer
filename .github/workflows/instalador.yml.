@@ -1,0 +1,34 @@
+# Crea el instalador .exe de Windows automaticamente en los servidores de GitHub
+name: Crear instalador Windows
+
+on:
+  workflow_dispatch:        # permite ejecutarlo con un boton (pestana Actions)
+  push:
+    tags: ["v*"]            # o al crear una etiqueta tipo v1.0
+
+jobs:
+  instalador:
+    runs-on: windows-latest
+    steps:
+      # 1. Descarga el codigo del repositorio
+      - uses: actions/checkout@v4
+      # 2. Instala Java 25 (el mismo que usa el proyecto)
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      # 3. Compila y genera el jar unico (target/AppHotel-1.0-SNAPSHOT.jar)
+      - run: mvn -B clean package
+      # 4. Crea el instalador .exe con jpackage (WiX ya viene en el servidor)
+      - name: jpackage
+        shell: cmd
+        run: >
+          jpackage --type exe --name "Hotel Eben-Ezer" --app-version 1.0
+          --input target --main-jar AppHotel-1.0-SNAPSHOT.jar
+          --main-class com.mycompany.apphotel.AppHotel
+          --win-shortcut --win-menu --win-dir-chooser --dest instalador
+      # 5. Deja el .exe disponible para descargar
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Instalador-Hotel-Eben-Ezer
+          path: instalador/*.exe
