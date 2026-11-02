@@ -33,6 +33,5 @@ Aplicación de escritorio en Java para gestionar huéspedes, habitaciones y rese
 4. Compilar: `mvn clean package`
 5. Ejecutar: abrir el proyecto en NetBeans y ejecutar la clase principal `com.mycompany.apphotel.AppHotel`.
 
-   
 ## Usuario de prueba
 Usuario: Admin / Contraseña: admin123
