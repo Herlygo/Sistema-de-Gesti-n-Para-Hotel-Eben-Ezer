@@ -29,9 +29,9 @@ Aplicación de escritorio en Java para gestionar huéspedes, habitaciones y rese
 1. `git clone https://github.com/Herlygo/Sistema-de-Gesti-n-Para-Hotel-Eben-Ezer.git`
 2. Crear un proyecto en Supabase y ejecutar `database/script_completo.sql` en el *SQL Editor*.
 3. Configurar la conexión en [`Conexion.java`](src/main/java/com/hotel/bd/Conexion.java) con la URL, el usuario y la contraseña del proyecto de Supabase (*Project Settings → Database → Connection string*).
-4. `mvn clean package` y ejecutar la clase principal `com.mycompany.apphotel.AppHotel`.
+4. Compilar: `mvn clean package`
+5. Ejecutar: abrir el proyecto en NetBeans y ejecutar la clase principal `com.mycompany.apphotel.AppHotel`.
 
-5.  Ejecutar: `java -jar target/AppHotel-1.0-SNAPSHOT.jar` (confirma el nombre exacto del archivo en la carpeta `target/`).
-
+   
 ## Usuario de prueba
 Usuario: Admin / Contraseña: admin123
