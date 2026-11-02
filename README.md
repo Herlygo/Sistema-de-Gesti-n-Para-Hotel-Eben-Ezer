@@ -14,7 +14,7 @@ Aplicación de escritorio en Java para gestionar huéspedes, habitaciones y rese
 ## Contenido del repositorio
 - `/src` – código fuente (Java + Maven)
 - `/database/script_completo.sql` – script completo de la base de datos
-- - **Instalador:** [Releases → v1.0](https://github.com/Herlygo/Sistema-de-Gesti-n-Para-Hotel-Eben-Ezer/releases/tag/v1.0)
+-  **Instalador:** [Releases → v1.0](https://github.com/Herlygo/Sistema-de-Gesti-n-Para-Hotel-Eben-Ezer/releases/tag/v1.0)
 - [Guía de la interfaz](README-INTERFAZ.md)
 
 ## Requisitos
